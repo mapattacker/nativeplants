@@ -26,8 +26,9 @@ cur.execute('SELECT L4country, id FROM tblLevel4') #get level 4 list
 L4List = cur.fetchall()
 
 #Connect to chrome browser
-browser = webdriver.Chrome()
+browser = webdriver.Chrome(chromeDriver)
 
+#for each species, look into GRIN website of the species and mark if the native regions are present
 x=0
 for row in spList:
     species = row[0]
