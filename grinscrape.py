@@ -50,7 +50,7 @@ for row in spList:
     native2 = html[native:]         #filter to include all text from native header to end of page
     native3 = native2[:native2.find('<h1>')]    #filter to include text only within native distribution
 
-    #scrap based on level 1 region
+    #scrape based on level 1 region
     if native > 1:
         cur.execute('UPDATE species SET hyperlink = ? WHERE speciesNAME = ?',(link, species))
 
@@ -62,7 +62,7 @@ for row in spList:
             if region > 1:
                 cur.execute('INSERT INTO nativeto(sp_id, to_id, lvl_id) VALUES (?, ?, ? )', (sp_id, row[1], 1))
 
-    #scrap based on level 2 region
+    #scrape based on level 2 region
     for row in L2List:
         if native <1:
             break
@@ -71,7 +71,7 @@ for row in spList:
             if region > 1:
                 cur.execute('INSERT INTO nativeto(sp_id, to_id, lvl_id) VALUES (?, ?, ? )', (sp_id, row[1], 2))
 
-    #scrap based on level 3 region
+    #scrape based on level 3 region
     for row in L3List:
         if native <1:
             break
@@ -80,7 +80,7 @@ for row in spList:
             if region > 1:
                 cur.execute('INSERT INTO nativeto(sp_id, to_id, lvl_id) VALUES (?, ?, ? )', (sp_id, row[1], 3))
 
-    #scrap based on level 4 region
+    #scrape based on level 4 region
     for row in L4List:
         if native <1:
             break
