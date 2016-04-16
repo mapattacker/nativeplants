@@ -5,7 +5,7 @@ from selenium.webdriver.common.keys import Keys
 
 ######################ENTER VARIABLES################################
 sqlitePath = 'grin.sqlite'  #path to sqlite database
-# chromeDriver = r'C:\Users\XXX\Scripts\chromedriver.exe' #path to chromedriver.exe
+chromeDriver = r'C:\Users\XXX\Scripts\chromedriver.exe' #path to chromedriver.exe
 
 ######################ENTER VARIABLES################################
 
