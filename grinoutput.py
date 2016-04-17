@@ -52,7 +52,7 @@ for row in cur:
 cur.execute("""SELECT L3area, count(speciesName) AS sum FROM nativeto n
                 JOIN  tblLevel4 L4 ON n.to_id = L4.id
                 JOIN species sp ON n.sp_id = sp.id
-				JOIN tblLevel3 L3 ON L4.L3code = L3.L3code
+		JOIN tblLevel3 L3 ON L4.L3code = L3.L3code
                 WHERE n.lvl_id = 4 and L3area LIKE '%china%'
                 GROUP BY L3area
 				ORDER BY L3area""")
