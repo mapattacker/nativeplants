@@ -47,7 +47,7 @@ for row in cur:
     print '{},{}'.format(row[0],row[1])
     csv2.write('{},{},3\n'.format(row[0],row[1]))
 
-#GRIN does not put in some regions of level 3 for China
+#GRIN does not put in some regions of China for level 3
 #hence a separate join calculation have to be made from level 4 to level 3
 cur.execute("""SELECT L3area, count(speciesName) AS sum FROM nativeto n
                 JOIN  tblLevel4 L4 ON n.to_id = L4.id
