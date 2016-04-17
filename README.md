@@ -11,4 +11,6 @@ The scripts makes use of the above two sources to extract their native distribut
 
 1) grinscrape.py: Using selenium, input each species name into GRIN's webform and find a match with the region provided by TDWG within their native distribution range. Results are stored in an sqlite database.
 
-2) grinoutput.py: Pulls out total count of each region for each hierarchical level. You can write your own SQL output if you require individual species details.
+2) grinoutput.py: Pulls out total count of each region for each hierarchical level into an csv file. You can write your own SQL output if you require individual species details.
+
+3) Generate world map: Download the shapefiles from Wek Gardens <href="http://www.kew.org/gis/tdwg/index.html">website</a>. Note their licensing criteria. Do a table join with the csv output using the region names to the shapefile attribute table's corresponding name.
