@@ -9,8 +9,13 @@ These ranges follow closely to the hierarchical system provided by the Internati
 
 The scripts makes use of the above two sources to extract their native distribution:
 
-1) grinscrape.py: Using selenium, input each species name into GRIN's webform and find a match with the region provided by TDWG within their native distribution range. Results are stored in an sqlite database.
+1) __grin.sqlite__: Take a look at the sqlite database template. You will need to load the species list into the "species" table, "speciesName" field. "nativeto" table holds the output of the scanned data from GRIN, i.e., species is native to which region. Subsequent tables are imported directed from the hierarchical system of plant distribution from TDWG
 
-2) grinoutput.py: Pulls out total count of each region for each hierarchical level into an csv file. You can write your own SQL output if you require individual species details.
+2) __grinscrape.py__: Using selenium, input each species name into GRIN's webform and find a match with the region provided by TDWG within their native distribution range. Results are stored in an sqlite database.
 
-3) Generate world map: Download the shapefiles from Wek Gardens <href="http://www.kew.org/gis/tdwg/index.html">website</a>. Note their licensing criteria. Do a table join with the csv output using the region names to the shapefile attribute table's corresponding name.
+3) __grinoutput.py__: Pulls out total count of each region for each hierarchical level into an csv file. You can write your own SQL output if you require individual species details.
+
+4) __Generate world map__: Download the shapefiles from Kew Gardens <a href="http://www.kew.org/gis/tdwg/index.html">website</a>. Note their licensing criteria. Do a table join with the csv output using the region names to the shapefile attribute table's corresponding name.
+
+### License
+My scripts are all MIT licensed. However, note that the TDWG data is a "Creative Commons Attribution 4.0 International Public License", and shapefiles are only for non-profit use. Please see their websites from the links provided earlier for more information.
