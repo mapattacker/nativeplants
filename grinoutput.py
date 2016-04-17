@@ -2,7 +2,7 @@ import sqlite3
 
 ######################ENTER VARIABLES################################
 sqlitePath = 'grin.sqlite'  #path to sqlite database
-csv = 'C:\Users\Siyang\Desktop\lflower.csv'    #path to output
+csv = 'C:\Users\XXX\Desktop\lflower.csv'    #path to csv output
 ######################ENTER VARIABLES################################
 
 csv2 = open(csv, 'w')
@@ -56,6 +56,7 @@ cur.execute("""SELECT L3area, count(speciesName) AS sum FROM nativeto n
                 WHERE n.lvl_id = 4 and L3area LIKE '%china%'
                 GROUP BY L3area
 				ORDER BY L3area""")
+				
 for row in cur:
     print '{},{}'.format(row[0],row[1])
     csv2.write('{},{},3\n'.format(row[0],row[1]))
