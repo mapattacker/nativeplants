@@ -1,9 +1,16 @@
 # nativeplants
 
 ### Description
+
+Extract native regions from a list of plant species and make a world map showing their distributions.
+
+### Data Sources
+
 Germplasm Resources Information Network (GRIN) has a large repository of plant related information; giving details like economic uses, common names, and most importantly, the distribution ranges where their native regions are also recorded.
 
 These ranges follow closely to the hierarchical system provided by the International Working Group on Taxonomic Databases for Plant Sciences (TDWG). It is in version 2 now. See more __<a href="https://github.com/tdwg/prior-standards/tree/master/world-geographical-scheme-for-recording-plant-distributions">here</a>__.
+
+Kew Gardens made world maps in shapefile format for each hierarchical level.
 
 ### How it works
 
