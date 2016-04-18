@@ -76,7 +76,7 @@ for row in spList:
         if native <1:
             break
         else:
-            region = native3.find(row[0])
+            region = native3.find(row[0]) + native3.find(row[2]) #look for synonym too
             if region > 1:
                 cur.execute('INSERT INTO nativeto(sp_id, to_id, lvl_id) VALUES (?, ?, ? )', (sp_id, row[1], 3))
 
@@ -85,7 +85,7 @@ for row in spList:
         if native <1:
             break
         else:
-            region = native3.find(row[0])
+            region = native3.find(row[0]) + native3.find(row[2]) #look for synonym too
             if region > 1:
                 cur.execute('INSERT INTO nativeto(sp_id, to_id, lvl_id) VALUES (?, ?, ? )', (sp_id, row[1], 4))
 
