@@ -20,9 +20,9 @@ cur.execute('SELECT L1continent, id FROM tblLevel1') #get level 1 list
 L1List = cur.fetchall()
 cur.execute('SELECT L2region, id FROM tblLevel2') #get level 2 list
 L2List = cur.fetchall()
-cur.execute('SELECT L3area, id FROM tblLevel3') #get level 3 list
+cur.execute('SELECT L3area, id, synonym FROM tblLevel3') #get level 3 list
 L3List = cur.fetchall()
-cur.execute('SELECT L4country, id FROM tblLevel4') #get level 4 list
+cur.execute('SELECT L4country, id, synonym FROM tblLevel4') #get level 4 list
 L4List = cur.fetchall()
 
 #Connect to chrome browser
@@ -76,7 +76,7 @@ for row in spList:
         if native <1:
             break
         else:
-            region = native3.find(row[0])
+            region = native3.find(row[0]) + native3.find(row[2]) #look for synonym too
             if region > 1:
                 cur.execute('INSERT INTO nativeto(sp_id, to_id, lvl_id) VALUES (?, ?, ? )', (sp_id, row[1], 3))
 
@@ -85,7 +85,7 @@ for row in spList:
         if native <1:
             break
         else:
-            region = native3.find(row[0])
+            region = native3.find(row[0]) + native3.find(row[2]) #look for synonym too
             if region > 1:
                 cur.execute('INSERT INTO nativeto(sp_id, to_id, lvl_id) VALUES (?, ?, ? )', (sp_id, row[1], 4))
 
