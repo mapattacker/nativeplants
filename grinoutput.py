@@ -2,7 +2,7 @@ import sqlite3
 
 ######################ENTER VARIABLES################################
 sqlitePath = 'grin.sqlite'  #path to sqlite database
-csv = 'C:\Users\XXX\Desktop\lflower.csv'    #path to csv output
+csv = 'C:\Users\XXX\Desktop\grin.csv'    #path to csv output
 ######################ENTER VARIABLES################################
 
 csv2 = open(csv, 'w')
