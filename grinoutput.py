@@ -55,7 +55,7 @@ cur.execute("""SELECT L3area, count(speciesName) AS sum FROM nativeto n
 		JOIN tblLevel3 L3 ON L4.L3code = L3.L3code
                 WHERE n.lvl_id = 4 and L3area LIKE '%china%'
                 GROUP BY L3area
-				ORDER BY L3area""")
+		ORDER BY L3area""")
 				
 for row in cur:
     print '{},{}'.format(row[0],row[1])
