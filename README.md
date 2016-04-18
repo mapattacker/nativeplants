@@ -22,7 +22,7 @@ The scripts makes use of the above two sources to extract their native distribut
 
 3) __grinoutput.py__: Pulls out total count of each region for each hierarchical level into an csv file. You can write your own SQL output if you require individual species details.
 
-4) __Generate world map__: Download the shapefiles from Kew Gardens __<a href="http://www.kew.org/gis/tdwg/index.html">website</a>__. Note their licensing criteria. Do a table join with the csv output using the region names to the shapefile attribute table's corresponding name.
+4) __Generate world map__: Download the shapefiles from Kew Gardens __<a href="http://www.kew.org/gis/tdwg/index.html">website</a>__. Do a table join with the csv output using the region names to the shapefile attribute table's corresponding name.
 
 ### License
 My scripts are all MIT licensed. However, note that the TDWG data is a "Creative Commons Attribution 4.0 International Public License", and shapefiles are only for non-profit use. Please see their websites from the links provided earlier for more information.
