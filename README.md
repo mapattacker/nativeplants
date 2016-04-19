@@ -24,5 +24,8 @@ The scripts makes use of the above two sources to extract their native distribut
 
 4) __Generate world map__: Download the shapefiles from Kew Gardens __<a href="http://www.kew.org/gis/tdwg/index.html">website</a>__. Do a table join with the csv output using the region names to the shapefile attribute table's corresponding name. Use a graduated symbology to show a heatmap of the world based on the accumulative native distributions of the plant species.
 
+### Notes
+It is possible that GRIN uses some other synonyms that I have not caught and placed in the sqlite tables. I will update it if I find more. The scraping will fail too when the search result more than 1 result. This needs to be decided by the user on which to choose.
+
 ### License
 My scripts are all MIT licensed. However, note that the TDWG data is a "Creative Commons Attribution 4.0 International Public License", and shapefiles are only for non-profit use. Please see their websites from the links provided earlier for more information.
