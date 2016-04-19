@@ -16,7 +16,7 @@ Kew Gardens made world maps in shapefile format for each hierarchical level.
 
 The scripts makes use of the above two sources to extract their native distribution:
 
-1) __grin.sqlite__: You will need to load the species list into the "species" table, "speciesName" field. "nativeto" table holds the output of the scanned data from GRIN, i.e., species is native to which region. Subsequent tables are imported directed from the hierarchical system of plant distribution from TDWG. I have added a new field "Synonym" to both level 3 and level 4 tables to catch some differences in naming convention between TDWG and GRIN.
+1) __grin.sqlite__: You will need to load the species list into the "species" table, "speciesName" field (note to only put in strictly generic and specific epithet, without the author's name). "nativeto" table holds the output of the scanned data from GRIN, i.e., species is native to which region. Subsequent tables are imported directed from the hierarchical system of plant distribution from TDWG. I have added a new field "Synonym" to both level 3 and level 4 tables to catch some differences in naming convention between TDWG and GRIN.
 
 2) __grinscrape.py__: Using selenium, input each species name into GRIN's webform and find a match with the region provided by TDWG within their native distribution range. Results are stored in an sqlite database.
 
