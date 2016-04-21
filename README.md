@@ -18,7 +18,7 @@ The scripts makes use of the above two sources to extract their native distribut
 
 1) __grin.sqlite__: You will need to load the species list into the "species" table, "speciesName" field (note to only put in strictly generic and specific epithet, without the author's name). "nativeto" table holds the output of the scanned data from GRIN, i.e., species is native to which region. Subsequent tables are imported directed from the hierarchical system of plant distribution from TDWG. I have added a new field "Synonym" to both level 3 and level 4 tables to catch some differences in naming convention between TDWG and GRIN.
 
-2) __grinscrape.py__: Using selenium, input each species name into GRIN's webform and find a match with the region provided by TDWG within their native distribution range. Results are stored in an sqlite database.
+2) __grinscrape.py__: The script will use selenium to input each species name into GRIN's webform, and find a match with the region provided by TDWG within their native distribution range. Results are stored in an sqlite database.
 
 3) __grinscrape2.py__: The scraping will fail too when the search result more than 1 result. This needs to be decided by the user on which to choose. For such instances, use this modified script. The script will prompt two inputs. First, enter the species in question indicated in sqlite "speciesName". After manually locating the plant species url in GRIN, then input the full url. The script will then update the native distributions in the database.
 
