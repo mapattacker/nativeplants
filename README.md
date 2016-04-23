@@ -4,6 +4,8 @@
 
 Extract native regions from a list of plant species and make a world map showing their distributions.
 
+This script was made to produce a plant distribution map for a book (still in press). World map shapefile was not from this source, but another with creative common license.
+
 ### Data Sources
 
 Germplasm Resources Information Network (GRIN) has a large repository of plant related information; giving details like economic uses, common names, and most importantly, the distribution ranges where their native regions are also recorded.
